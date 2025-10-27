@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Slider from "../wine-components/slider/slider";
+import Slider from "../wine-components/slider/wine-slider";
 import List from "../wine-components/list/list";
 import Sommelier from "../wine-components/sommelier/sommelier";
 import AboutSommelier from "../components/sommelier-section/aboutSommelier";

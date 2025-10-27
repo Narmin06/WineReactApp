@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import bottleImg from "../../assets/images/изображение для оффера (1).png";
 import bannerBg from "../../assets/images/баннер (5).png";
 import slide2 from "../../assets/images/image2.png";
-import "./Slider.css";
+// import "./wine-Slider.css";
 import { MoveRight, MoveLeft} from 'lucide-react';
 
 export default function Slider() {
