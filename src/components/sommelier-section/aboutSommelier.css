@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+.about-sommelier {
+  background-color: rgb(39, 35, 35);
+  padding-left: 70px;
+  width: 100%;
+  padding-top: 35px;
+  border: none;
+  padding-bottom: 60px;
+}
+
+.about-container {
+  display: flex;
+  gap: 100px;
+  justify-content: space-around;
+}
+
+.about-left,
+.about-right {
+  text-align: justify;
+  width: 37%;
+}
+
+.about-left p,
+.about-right p {
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+@media (max-width: 1024px) {
+  .about-sommelier {
+   padding-top: 40px;
+    padding-left: 20px;
+}
+
+.about-left p,
+.about-right p {
+  font-size: 13px;
+}
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    justify-content: space-around;
+  }
+  
+.about-left p,
+.about-right p {
+    font-size: 7.6px;
+}
+}
+
+@media (max-width: 500px) {
+  .about-sommelier {
+    padding: 40px 20px;
+  }
+   .about-container {
+    gap: 40px;
+  }
+
+  .about-left p,
+  .about-right p {
+    font-size: 10px;
+  }
+}

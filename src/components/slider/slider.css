@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.slider {
+  position: relative;
+  height: 420px;
+  background-color: rgb(39, 35, 35);
+  overflow: hidden;
+}
+
+.slide:nth-child(2) {
+  margin-top: 0px;
+  height: 405px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; 
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.combined-slide {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  background-color: black;
+}
+
+.bottle-img {
+  width: 60%;
+  height: 100%;
+}
+
+.banner-section {
+  width: 700%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -16px;
+  margin-left: -90px;
+}
+
+.banner-bg {
+  margin-right: -15px;
+  width: 100%;
+  height: 108.5%;
+  object-fit: cover;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.banner-text {
+  position: absolute;
+  text-align: center;
+  max-width: 620px;
+  margin-right: -150px;
+}
+
+.banner-text h3 {
+  font-family: "Alex Brush";
+  font-weight: 400;
+  font-size: 68px;
+  margin-bottom: 20px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.banner-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  letter-spacing: 5%;
+  margin-bottom: 40px;
+  width: 110%;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.banner-text .bottom-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.35em;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.slide-bg {
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-right {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  text-align: center;
+  max-width: 500px;
+}
+
+.content-right h3 {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-size: 68px;
+  margin-bottom: 20px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.content-right h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 5%;
+  margin-bottom: 40px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.bottom-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.35em;
+  color: #fff;
+  opacity: 0.9;
+}
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.arrow-btn.left {
+  left: 10px;
+}
+
+.arrow-btn.right {
+  right: 10px;
+}
+
+.arrow-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 1550px) {
+  .slider {
+    height: 305px;
+  }
+
+  .slide:nth-child(2) {
+    height: 285px;
+  }
+
+  .bottle-img {
+    width: 100%;
+    height: 103%;
+    object-fit: cover;
+  }
+
+  .banner-section {
+    width: 80%;
+    margin-top: -10px;
+  }
+
+  .banner-bg {
+    width: 100%;
+    height: 122%;
+    display: block;
+    clip-path: polygon(13% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .banner-text {
+    top: 55%;
+    transform: translateY(-50%);
+    margin-left: -100px;
+    max-width: 90%;
+  }
+
+  .banner-text h3 {
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .banner-text h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .banner-text .bottom-text {
+    font-size: 13px;
+  }
+
+  .slide-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content-right {
+    width: 45%;
+    margin-right: -40px;
+    margin-top: 0;
+  }
+
+  .content-right h3 {
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .content-right h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+
+  .bottom-text {
+    font-size: 13px;
+  }
+
+    .arrow-btn {
+  top: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.arrow-btn.left {
+  left: 10px;
+}
+
+.arrow-btn.right {
+  right: 10px;
+}
+}
+
+@media (max-width: 1400px) {
+  .slider {
+    height: 200px;
+  }
+
+  .slide:nth-child(2) {
+    height: 190px;
+  }
+
+  .bottle-img {
+    width: 100%;
+    height: 105%;
+    object-fit: cover;
+  }
+
+  .banner-section {
+    width: 80%;
+    margin-top: -10px;
+  }
+
+  .banner-bg {
+    width: 100%;
+    height: 122%;
+    display: block;
+    clip-path: polygon(13% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .banner-text {
+    top: 55%;
+    transform: translateY(-50%);
+    margin-left: -60px;
+    max-width: 90%;
+  }
+
+  .banner-text h3 {
+    font-size: 35px;
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .banner-text h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .banner-text .bottom-text {
+    font-size: 13px;
+  }
+
+  .slide-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content-right {
+    width: 45%;
+    margin-right: -40px;
+    margin-top: 0;
+  }
+
+  .content-right h3 {
+    font-size: 35px;
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .content-right h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .bottom-text {
+    font-size: 13px;
+  }
+
+  .arrow-btn {
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+  } 
+
+  .left {
+    left: 5px;
+  }
+  
+  .right {
+    right: 5px;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    height: 260px;
+  }
+
+  .slide:nth-child(2) {
+    height: 250px;
+  }
+
+  .bottle-img {
+    width: 100%;
+    height: 107%;
+    object-fit: cover;
+  }
+
+  .banner-section {
+    width: 98%;
+  }
+
+  .banner-bg {
+    width: 110%;
+    height: 132%;
+    clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .banner-text {
+    max-width: 420px;
+    right: 0%;
+    top: 55%;
+    margin-right: 0px;
+  }
+
+  .banner-text h3 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  .banner-text h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .banner-text .bottom-text {
+    font-size: 10px;
+  }
+
+  .slide-bg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-right {
+    margin-top: 15px;
+    margin-right: -60px;
+  }
+
+  .content-right h3 {
+    font-size: 45px;
+    margin-bottom: 1px;
+  }
+
+  .content-right h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .bottom-text {
+    font-size: 10px;
+  }
+
+  .left {
+    left: 5px;
+  }
+  
+  .right {
+    right: 5px;
+  }
+}
+
+@media (max-width: 900px)  {
+  .slider {
+    height: 180px;
+  }
+
+  .slide:nth-child(2) {
+    height: 160px;
+  }
+
+  .bottle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner-section {
+    width: 100%;
+    margin-top: -16px;
+  }
+
+  .banner-bg {
+    width: 110%;
+    height: 130%;
+    display: block;
+    clip-path: polygon(13% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .banner-text {
+    max-width: 300px;
+    margin-right: 40px;
+  }
+
+  .banner-text h3 {
+    font-size: 35px;
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .banner-text h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+  }
+
+  .banner-text .bottom-text {
+    font-size: 10px;
+  }
+
+  .slide-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .content-right {
+    margin-top: -10px;
+    margin-right: -40px;
+  }
+
+  .content-right h3 {
+    font-size: 35px;
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .content-right h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .bottom-text {
+    font-size: 10px;
+  }
+  .arrow-btn {
+  top: 45%;
+  width: 40px;
+  height: 40px;
+}
+
+.arrow-btn.left {
+  left: 5px;
+}
+
+.arrow-btn.right {
+  right: 5px;
+}
+
+}
+
+@media (max-width: 500px) {
+  .slider {
+    height: 100px;
+  }
+
+  .slide:nth-child(2) {
+    height: 92px;
+  }
+
+  .bottle-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-section {
+    width: 70%;
+    height: 117%;
+    margin-top: -16px;
+  }
+
+  .banner-bg {
+    width: 100%;
+    height: 108%;
+    object-fit: cover;
+    display: block;
+    clip-path: polygon(13% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .banner-text {
+    padding-left: 10px;
+    top: 55%;
+    margin-right: 10px;
+    max-width: 90%;
+  }
+
+  .banner-text h3 {
+    font-size: 18px;
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .banner-text h2 {
+    font-size: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .banner-text .bottom-text {
+    font-size: 8px;
+  }
+
+  .slide-bg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-right {
+    width: 45%;
+    margin-right: -20px;
+  }
+
+  .content-right h3 {
+    font-size: 18px;
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .content-right h2 {
+    font-size: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .bottom-text {
+    font-size: 8px;
+  }
+
+  .arrow-btn {
+    width: 25px;
+    height: 25px;
+  }
+
+  .arrow-btn img {
+    width: 10px;
+    height: 10px;
+  }
+}
