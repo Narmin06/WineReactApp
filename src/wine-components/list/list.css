@@ -109,7 +109,6 @@
 }
 }
 
-
 @media (max-width: 500px) {
   .products-grid {
     grid-template-columns: 1fr;

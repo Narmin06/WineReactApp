@@ -12,8 +12,7 @@ export default function List({ searchTerm = "" }) {
   const [filters, setFilters] = useState({});
   const [pageSize, setPageSize] = useState(9);
 
-  // 🔹 Dinamik səhifə ölçüsü — mobil üçün azaldır
-  useEffect(() => {
+ useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 900) setPageSize(8);
       else setPageSize(9);

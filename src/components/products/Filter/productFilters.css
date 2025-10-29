@@ -1,19 +1,22 @@
-.filters {
+.filters-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 25px;
-  width: 250px ;
+  gap: 30px;
   background-color: rgb(39, 35, 35);
+  align-items: flex-start;
 }
 
 .filter-block {
   border-bottom: 1px solid #555;
   padding-bottom: 10px;
+  border: none !important;
+  width: 100%;        /* 🔥 xətt tam setiri tutsun */
+ 
 }
 
 .filter-block h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   border-bottom: 1px solid #777;
   padding-bottom: 6px;
@@ -24,11 +27,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 200px !important;
 }
 
 .filter-block li {
-  margin: 10px 0;
+  margin: 7px 0;
 }
 
 .filter-block label {
@@ -36,8 +38,9 @@
   color: #ccc;
   display: flex;
   align-items: center;
-  gap: 20px !important;
   transition: all 0.2s ease;
+  padding-bottom: 5px;
+  padding-right: 100px;
 }
 
 .filter-block input[type="radio"] {
@@ -47,16 +50,18 @@
   border: 1px solid #FFFFFF;
   border-radius: 3px;        
   cursor: pointer;
+  
 }
 
 .filter-block input[type="radio"]:checked {
   background-color: #7A0000;
-  background-color: #7A0000;
-  box-shadow: 0 0 0 2px #7A0000;
+  box-shadow: 0 0 0 0px #7A0000;
+  border:  #7A0000;
 }
 
 .filter-block input[type="radio"]:hover {
   border-color: #c00;
+  color: #7A0000;
 }
 
 .price-filter {
@@ -86,6 +91,22 @@
 
 .price-ok:hover {
   background-color: #c00;
+}
+
+.filter-toggle {
+  display: none;
+  background-color: #7a0000;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.4s ease;
+}
+.filter-toggle:hover {
+  background-color: #b10000;
 }
 
 @media (max-width: 1400px) and (min-width: 1024px) {
@@ -168,73 +189,120 @@
   }
 }
 
-@media (max-width: 600px) {
-.filters {
-  align-items:center;
-  justify-content: center;
-  width: 100%;
-  gap: 60px;
-}
+@media (max-width: 900px) {
+  .filter-toggle {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-left: -55px;
+    padding: 12px 25px;
+  }
 
-.filter-block  {
-  min-width: 160px;
-  padding-bottom: 7px;
-}
-.filter-block h3 {
-  font-size: 18px;
-}
-.filter-block label {
-  font-size: 14px;
-  gap: 20px !important ;
-}
-
-.filter-block input[type="radio"] {
-  transform: scale(1.4);
-}
-.price-filter {
-  gap: 5px;
-}
-
-.price-filter input {
-  width: 50px;
-  padding: 5px;
-  font-size: 13px;
-}
-.price-ok {
-  padding: 4px 9px;
-  font-size: 9px;
-}
-}
-
-@media (max-width: 500px) {
   .filters {
     display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 15px;
-}
-.filter-block {
-  padding-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    margin: 0; 
+    transition: height 0.4s ease, opacity 0.3s ease;
+  }
+
+  .filters.show {
+   height: auto; 
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  .wine {
+    font-size: 75px;
+  }
+
+  .filter-block {
+    margin-bottom: 20px;
+  }
+
+  .filter-block h3 {
+    font-size: 18px;
+  }
+
+  .filter-block label {
+    font-size: 10px;
+  }
+
+  .price-filter {
+    justify-content: center;
+  }
+
+  .price-filter input {
+    font-size: 12px;
+  }
+
+  .price-ok {
+    font-size: 5px;
+  }
 }
 
-.filter-block h3 {
-  font-size: 15px;
-}
-.filter-block label {
-  font-size: 12px;
-  gap: 20px !important ;
-}
-.price-filter {
-  gap: 10px;
+@media (max-width: 600px) {
+  .filter-toggle {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: -10px;
+    margin-left: 0px;
+    padding: 12px 25px;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.4s ease, opacity 0.3s ease;
+  }
+
+  .filters.show {
+   height: auto; 
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  .filter-block {
+    margin-bottom: 20px;
+  }
+
+  .filter-block h3 {
+    font-size: 18px;
+  }
+
+  .filter-block label {
+    font-size: 10px;
+  }
+
+  .price-filter {
+    justify-content: center;
+  }
+
+  .price-filter input {
+    font-size: 12px;
+  }
+
+  .price-ok {
+    font-size: 5px;
+  }
 }
 
-.price-filter input {
-  width: 50px;
-  padding: 5px;
-  font-size: 13px;
-}
-.price-ok {
-  padding: 5px 10px;
-  font-size: 15px;
-}
-}

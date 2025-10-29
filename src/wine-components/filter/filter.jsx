@@ -12,7 +12,6 @@ export default function Filter({ onFilterChange }) {
   const [showFilters, setShowFilters] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
-  // 🔹 Ekran ölçüsünə görə mobil rejimi izləyirik
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 800);
     window.addEventListener("resize", handleResize);
