@@ -134,12 +134,18 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px !important;
   }
+    .sort-container{
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+  
+  }
 }
 
 @media (max-width: 600px) {
   .filters-wrapper {
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: flex-start ;
     margin-left: 20px;
   }
 
@@ -147,7 +153,6 @@
     display: flex;
     justify-content: center !important;
     align-items: center;
-    margin-top: 20px;
   }
 
   .products-content {
