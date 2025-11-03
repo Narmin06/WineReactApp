@@ -1,0 +1,128 @@
+.recommended-section {
+    background: #1b1919;
+    color: #fff;
+    padding: 80px 100px;
+    text-align: center;
+  }
+  
+  .recommended-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+  
+  /* --- Slider --- */
+  .slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .slider-track {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+  
+  .slider-track::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .slider-track::-webkit-scrollbar-thumb {
+    background: #7a0000;
+    border-radius: 10px;
+  }
+  
+  /* --- Cards --- */
+  .recommended-card {
+    background: #111;
+    min-width: 300px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+  }
+  
+  .recommended-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image-wrapper {
+    background: #0e0e0e;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+  
+  .rec-name {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .rec-meta {
+    color: #aaa;
+    font-size: 13px;
+    margin: 5px 0;
+  }
+  
+  .rec-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0;
+  }
+  
+  .rec-btn {
+    background-color: #7a0000;
+    border: none;
+    color: #fff;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .rec-btn:hover {
+    background-color: #a50000;
+  }
+  
+  /* --- View all button --- */
+  .view-all-btn {
+    margin-top: 40px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 4px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .view-all-btn:hover {
+    color: #a50000;
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 1024px) {
+    .recommended-section {
+      padding: 50px 30px;
+    }
+  
+    .recommended-card {
+      min-width: 250px;
+    }
+  }
+  

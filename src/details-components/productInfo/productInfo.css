@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 .product-details {
   display: flex;
   align-items: flex-start;
   background-color: #1b1919;
-  color: #fff;
   padding: 60px 80px;
   gap: 150px;
   position: relative;
@@ -14,9 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
   position: relative;
-  transition: transform 0.4s ease-out;
   will-change: transform;
   height: 450px;
   width: 400px;
@@ -30,22 +29,11 @@
   display: block;
 }
 
-
-/* Bonus: əgər vizual animasiya istəsən (məs: opacity ilə birlikdə) */
-@keyframes bottleMove {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
 .product-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding-top: 10px;
 }
 
 .product-title {
@@ -55,7 +43,7 @@
 }
 
 .product-meta {
-  font-family: Inter;
+  font-family: "Inter";
   font-weight: 600;
   font-size: 15px;
   color: #bdbdbd;
@@ -63,7 +51,7 @@
 }
 
 .product-price {
-  font-family: Inter;
+  font-family: "Inter";
   font-weight: 600;
   text-transform: uppercase;
   font-size: 26px;
@@ -80,8 +68,8 @@
 .buy-row input {
   width: 55px;
   text-align: center;
-  font-size: 15px;
-  padding: 5px;
+  font-size: 16px;
+  padding: 8px;
   background: #222;
   color: white;
   border: 1px solid #555;
@@ -93,7 +81,7 @@
   padding: 10px 25px;
   cursor: pointer;
   transition: 0.3s;
-  font-family: Inter;
+  font-family: "Inter";
   font-weight: 800;
   font-size: 14px;
 }
@@ -140,21 +128,61 @@
   font-size: 13px;
 }
 
+@media(max-width: 1290px){
+  .product-details {
+    padding: 60px 80px;
+    gap: 160px;
+  }
+  
+  .product-left {
+    height: 400px;
+    width: 350px;
+    padding-bottom: 40px;
+  }
+  
+  .product-left img {
+    width: 300px;
+    height: 430px;
+  }
+}
+
+@media(max-width: 1150px){
+  .product-details {
+    padding: 60px 80px;
+    gap: 155px;
+  }
+  
+  .product-left {
+    height: 390px;
+    width: 340px;
+    padding-bottom: 40px;
+  }
+  
+  .product-left img {
+    width: 350px;
+    height: 400px;
+  }
+}
+
 @media (max-width: 1024px) {
   .product-details {
     flex-direction: column;
-    padding: 50px 40px;
+    padding: 0px 40px;
+    padding-bottom: 40px;
     gap: 60px;
   }
 
   .product-left {
-    width: 100%;
-    justify-content: center;
-    height: auto;
+    height: 100%;
+    width: 109%;
+    padding-top: 20px;
+    margin-left: -40px;
+    transform: none !important;
   }
 
   .product-left img {
     width: 250px;
+    height: 320px;
   }
 
   .product-info {
