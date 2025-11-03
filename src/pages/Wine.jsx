@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Slider from "../wine-components/slider/wine-slider";
+import Slider from "../components/slider/slider";
 import List from "../wine-components/list/list";
-import Sommelier from "../wine-components/sommelier/sommelier";
+import WineSommelier from "../wine-components/wine-sommelier/wine-sommelier";
 import AboutSommelier from "../components/sommelier-section/aboutSommelier";
 
 export default function Wine() {
@@ -11,7 +11,7 @@ export default function Wine() {
     <>
     <Slider />
     <List searchTerm={searchTerm} />
-    <Sommelier/>
+    <WineSommelier/>
     <AboutSommelier />
     </>
   );

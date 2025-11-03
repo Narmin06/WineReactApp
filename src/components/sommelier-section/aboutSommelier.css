@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 .about-sommelier {
   background-color: rgb(39, 35, 35);
-  padding-left: 70px;
   width: 100%;
-  padding-top: 35px;
+  padding-top: 40px;
   padding-bottom: 60px;
+  padding-left: 40px;
 }
 
 .about-container {
@@ -21,47 +22,86 @@
 
 .about-left p,
 .about-right p {
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-size: 15px;
-    line-height: 25px;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 25px;
 }
 
-/*
 @media (max-width: 1024px) {
   .about-sommelier {
-   padding-top: 40px;
-    padding-left: 20px;
-}
+    padding-bottom: 40px;
+    padding-right: 8px;
+  }
 
-.about-left p,
-.about-right p {
-  font-size: 13px;
-}
+  .about-container {
+    flex-direction: row;  
+    justify-content: center;
+    gap: 20px;               
+  }
+
+  .about-left,
+  .about-right {
+    width: 90%;              
+    max-width: 100%;
+    text-align: left;         
+  }
+
+  .about-left p,
+  .about-right p {
+    font-size: 15px;
+    line-height: 150%;
+  }
 }
 
 @media (max-width: 900px) {
-  .about-container {
-    justify-content: space-around;
+  .about-sommelier {
+    padding-bottom: 40px;
+    padding-right: 10px;
   }
-  
-.about-left p,
-.about-right p {
-    font-size: 7.6px;
-}
+
+  .about-container {
+    flex-direction: row;  
+    justify-content: center;
+    gap: 20px;               
+  }
+
+  .about-left,
+  .about-right {
+    width: 90%;              
+    max-width: 100%;
+    text-align: left;         
+  }
+
+  .about-left p,
+  .about-right p {
+    font-size: 12px;
+    line-height: 150%;
+  }
 }
 
 @media (max-width: 500px) {
   .about-sommelier {
-    padding: 40px 20px;
+    padding-bottom: 30px;
+    padding-right: 8px;
   }
-   .about-container {
-    gap: 40px;
+
+  .about-container {
+    flex-direction: row;  
+    justify-content: center;
+    gap: 20px;               
+  }
+
+  .about-left,
+  .about-right {
+    width: 90%;              
+    max-width: 100%;
+    text-align: left;         
   }
 
   .about-left p,
   .about-right p {
     font-size: 10px;
+    line-height: 150%;
   }
 }
-*/

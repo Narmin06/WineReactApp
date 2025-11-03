@@ -5,13 +5,15 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Wine from "./pages/Wine";
+import ProductDetails from "./pages/ProductDetails"; // ✅ bunu əlavə et
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/wine" element={<Wine />} /> 
+        <Route path="/wine" element={<Wine />} />
+        <Route path="/:category/:id" element={<ProductDetails />} /> {/* ✅ */}
       </Route>
 
       <Route path="/auth" element={<AuthLayout />}>

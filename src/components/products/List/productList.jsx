@@ -3,7 +3,8 @@ import ProductFilters from "../Filter/productFilters";
 import ProductCard from "../Card/productCard";
 import ProductSort from "../Sort/productSort";
 import Pagination from "../Pagination/pagination";
-import image from "../../../assets/images/wine.png";
+import products from "../../../data/products";
+ 
 import "./productList.css";
 
 export default function ProductList({ searchTerm = "" }) {
@@ -17,23 +18,10 @@ export default function ProductList({ searchTerm = "" }) {
       if (window.innerWidth < 900) setPageSize(8);
       else setPageSize(9);
     };
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const products = [
-    { id: 1, name: "L'ERMITE HERMITAGE", price: 90000, imageUrl: image, year: 2009 },
-    { id: 2, name: "LE MEAL", price: 85000, imageUrl: image, year: 2008 },
-    { id: 3, name: "LES GRIFFES", price: 95000, imageUrl: image, year: 2011 },
-    { id: 4, name: "CROZES-HERMITAGE", price: 70000, imageUrl: image, year: 2012 },
-    { id: 5, name: "ERMITAGE BLANC", price: 88000, imageUrl: image, year: 2010 },
-    { id: 6, name: "CÔTE-RÔTIE", price: 120000, imageUrl: image, year: 2007 },
-    { id: 7, name: "CONDRIEU", price: 86000, imageUrl: image, year: 2014 },
-    { id: 8, name: "CHÂTEAUNEUF-DU-PAPE", price: 97000, imageUrl: image, year: 2015 },
-    { id: 9, name: "HERMITAGE BLANC", price: 91000, imageUrl: image, year: 2013 },
-    { id: 10, name: "SAINT-JOSEPH", price: 65000, imageUrl: image, year: 2016 },
-  ];
 
   const searchedProducts = useMemo(() => {
     return products.filter((p) =>
@@ -76,7 +64,7 @@ export default function ProductList({ searchTerm = "" }) {
 
         <div className="products-grid">
           {pagedProducts.map((p) => (
-            <ProductCard key={p.id} product={p} />
+            <ProductCard key={p.id} product={p} category="wine" /> 
           ))}
         </div>
 
@@ -84,7 +72,7 @@ export default function ProductList({ searchTerm = "" }) {
           totalPages={totalPages}
           currentPage={page}
           onPageChange={setPage}
-          onPageSizeChange={setPageSize} 
+          onPageSizeChange={setPageSize}
         />
       </div>
     </div>

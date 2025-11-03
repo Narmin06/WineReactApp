@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
-import Filter from "../filter/filter";
+import WineFilter from "../wine-filter/wine-filter";
 import ProductCard from "../../components/products/Card/productCard";
 import ProductSort from "../../components/products/Sort/productSort";
 import Pagination from "../../components/products/Pagination/pagination";
@@ -67,7 +67,7 @@ export default function List({ searchTerm = "" }) {
   return (
     <div className="products-section">
       <div className="filters-wrapper">
-        <Filter onFilterChange={setFilters} />
+        <WineFilter onFilterChange={setFilters} />
       </div>
 
       <div className="products-content">

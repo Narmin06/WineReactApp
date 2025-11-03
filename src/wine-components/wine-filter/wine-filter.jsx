@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./filter.css";
+import "./wine-filter.css";
 
-export default function Filter({ onFilterChange }) {
+export default function WineFilter({ onFilterChange }) {
   const [filters, setFilters] = useState({
     color: "",
     sweetness: "",
@@ -35,20 +35,20 @@ export default function Filter({ onFilterChange }) {
   }, [filters]);
 
   return (
-    <div className="filters-container">
+    <div className="wine-filters-container">
       <p className="wine">Wine</p>
 
       {isMobile && (
         <button
-          className="filter-toggle"
+          className="wine-filter-toggle"
           onClick={() => setShowFilters(!showFilters)}
         >
           {showFilters ? "Hide Filters ✖" : "Show Filters ☰"}
         </button>
       )}
 
-      <div className={`filters ${!isMobile || showFilters ? "show" : ""}`}>
-        <div className="filter-block">
+      <div className={`wine-filters ${!isMobile || showFilters ? "show" : ""}`}>
+        <div className="wine-filter-block">
           <h3>Color</h3>
           <ul>
             {["White", "Red", "Pink", "Other"].map((color) => (
@@ -68,7 +68,7 @@ export default function Filter({ onFilterChange }) {
           </ul>
         </div>
 
-        <div className="filter-block">
+        <div className="wine-filter-block">
           <h3>Sweetness</h3>
           <ul>
             {["Dry", "Sweet", "Dessert", "Fortified"].map((sweetness) => (
@@ -88,9 +88,9 @@ export default function Filter({ onFilterChange }) {
           </ul>
         </div>
 
-        <div className="filter-block">
+        <div className="wine-filter-block">
           <h3>Price</h3>
-          <div className="price-filter">
+          <div className="wine-price-filter">
             <input
               type="number"
               name="minPrice"
@@ -107,7 +107,7 @@ export default function Filter({ onFilterChange }) {
               onChange={handlePriceChange}
               min="0"
             />
-            <button className="price-ok">OK</button>
+            <button className="wine-price-ok">OK</button>
           </div>
         </div>
       </div>
